@@ -1,13 +1,19 @@
 <html><body>
-Takes a minute to load!
+bmt chats side by side 25 post at a time!
+ Takes a minute to load!
 <div id='loader' style="position:absolute;top:10;left:0;width:500;overflow:hidden;"></div>
  <div id='loader2' style="position:absolute;top:10;left:600;width:500;overflow:hidden;"><div>
+Enter a starting post number:<input type="number" id="pp" min="1" max="25000" step=25>
+  <input type='button' caption='click to load' onclick="loadme()"></input>
 <script>
-var len =2000;
-var output="";
+var len =25;
+
 var sc =new Array();
 var scb =new Array();
-for (var i = 1; i < len; i++) {
+var startat= document.getElementById('pp').value;
+function loadme(){
+document.getElementById('pp').style.visibility = "hidden";
+ for (var i = startat; i < len; i++) {
  
     sc[i] = document.createElement('script');
     sc[i].setAttribute('type', 'text/javascript');
@@ -24,5 +30,6 @@ document.getElementById('loader').appendChild(sc[i]);
 document.getElementById('loader2').appendChild(scb[i]);      
 
 }
-
+var startat=startat+25;
+}
 </script></body></html>
