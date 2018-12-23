@@ -1,0 +1,27 @@
+<html><body>
+
+<div id='loader' style="position:absolute;top:10;left:0;width:500;overflow:hidden;">r</div>sss<div id='loader2' style="position:absolute;top:10;left:600;width:500;overflow:hidden;">r/div>
+<script>
+var len =2000;
+var output="";
+var sc =new Array();
+var scb =new Array();
+for (var i = 1; i < len; i++) {
+ 
+    sc[i] = document.createElement('script');
+    sc[i].setAttribute('type', 'text/javascript');
+    sc[i].setAttribute('data-telegram-post','unofficialbitminuteschat/'+i+'');
+    sc[i].setAttribute('data-width','100%');
+    sc[i].setAttribute('src', 'https://telegram.org/js/telegram-widget.js?5');
+document.getElementById('loader').appendChild(sc[i]);    
+document.getElementById('loader').appendChild(sc[i]); 
+    scb[i] = document.createElement('script');
+    scb[i].setAttribute('type', 'text/javascript');
+    scb[i].setAttribute('data-telegram-post','Bitminuteschat/'+i+'');
+    scb[i].setAttribute('data-width','100%');
+    scb[i].setAttribute('src', 'https://telegram.org/js/telegram-widget.js?5');
+document.getElementById('loader2').appendChild(scb[i]);      
+
+}
+
+</script></body></html>
