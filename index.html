@@ -9,7 +9,10 @@ BMT chats, side by side, 25 post at a time!
 
 var sc =new Array();
 var scb =new Array();
-
+function go()
+ {
+  var timer=setTimeout(loadme, 3000);
+ }
 var startat=1;
  function loadme(){
            
@@ -33,6 +36,6 @@ document.getElementById('loader2').appendChild(scb[i]);
 }
 startat=startat+5;
 len =startat+5;
-setTimeout(loadme, 3000);
+go();
 }
 </script></body></html>
