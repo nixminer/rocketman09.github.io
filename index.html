@@ -1,41 +1,40 @@
 <html><body onload="loadme()">
-BMT chats, side by side, 25 post at a time!
- Takes a minute to load!
-<div id='loader' style="position:absolute;top:40;left:0;width:500;overflow:hidden;"></div>
- <div id='loader2' style="position:absolute;top:40;left:600;width:500;overflow:hidden;"><div>
+Bitminutes undeleter Takes a minute to load!fails some times
+//<div id='loader' style="position:absolute;top:40;left:0;width:500;overflow:hidden;"></div>
+ <div id='loader2' style="position:absolute;top:40;left:0;width:500;overflow:hidden;"><div>
 
 
 <script>
-
-var sc =new Array();
+var i=0;
+//var sc =new Array();
 var scb =new Array();
 function go()
  {
-  var timer=setTimeout(loadme, 3000);
+  var timer=setTimeout(loadme, 500);
  }
 var startat=1;
  function loadme(){
-           
- var len =startat+5;
-  for (var i = startat; i < len; i++) {
+       i=startat;    
+ //var len =startat+5;
+  //for (var i = startat; i < len; i++) {
  
-    sc[i] = document.createElement('script');
-    sc[i].setAttribute('type', 'text/javascript');
-    sc[i].setAttribute('data-telegram-post','unofficialbitminuteschat/'+i+'');
-    sc[i].setAttribute('data-width','100%');
-    sc[i].setAttribute('src', 'https://telegram.org/js/telegram-widget.js?5');
-document.getElementById('loader').appendChild(sc[i]);    
-document.getElementById('loader').appendChild(sc[i]); 
+  //  sc[i] = document.createElement('script');
+   // sc[i].setAttribute('type', 'text/javascript');
+   // sc[i].setAttribute('data-telegram-post','unofficialbitminuteschat/'+i+'');
+   // sc[i].setAttribute('data-width','100%');
+   /// sc[i].setAttribute('src', 'https://telegram.org/js/telegram-widget.js?5');
+//document.getElementById('loader').appendChild(sc[i]);    
+
     scb[i] = document.createElement('script');
     scb[i].setAttribute('type', 'text/javascript');
     scb[i].setAttribute('data-telegram-post','Bitminuteschat/'+i+'');
     scb[i].setAttribute('data-width','100%');
     scb[i].setAttribute('src', 'https://telegram.org/js/telegram-widget.js?5');
 document.getElementById('loader2').appendChild(scb[i]);      
-
-}
-startat=startat+5;
-len =startat+5;
+i++;
+//}
+//startat=startat+5;
+//len =startat+5;
 go();
 }
 </script></body></html>
