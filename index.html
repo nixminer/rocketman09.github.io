@@ -3,7 +3,7 @@ BMT chats, side by side, 25 post at a time!
  Takes a minute to load!
 <div id='loader' style="position:absolute;top:10;left:0;width:500;overflow:hidden;"></div>
  <div id='loader2' style="position:absolute;top:10;left:600;width:500;overflow:hidden;"><div>
-<p id='s'>Enter a starting post number:<input type="number" id="pp" min="2" max="25000" step=25></input>
+<p id='s'>Enter a starting post number:<input type="number" id="pp" min="2" max="25000" step=5></input>
  </p> <input type='button' value='click to load' onclick="loadme()"></input>
 <script>
 
@@ -12,12 +12,12 @@ var scb =new Array();
 var onetime=1;
 var startat=1;
  function loadme(){
-   startat=startat+25;
+   startat=startat+5;
   if (onetime==1) {
   startat= document.getElementById('pp').value;
    onetime=0;
                  }
- var len =startat+25;
+ var len =startat+5;
 document.getElementById('s').style.visibility = "hidden";
  
   for (var i = startat; i < len; i++) {
