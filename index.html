@@ -1,10 +1,10 @@
 <html><body>
 BMT chats, side by side, 25 post at a time!
  Takes a minute to load!
-<div id='loader' style="position:absolute;top:10;left:0;width:500;overflow:hidden;"></div>
- <div id='loader2' style="position:absolute;top:10;left:600;width:500;overflow:hidden;"><div>
+<div id='loader' style="position:absolute;top:40;left:0;width:500;overflow:hidden;"></div>
+ <div id='loader2' style="position:absolute;top:40;left:600;width:500;overflow:hidden;"><div>
 
- </p> <input type='button' value='click to load' onclick="loadme()"></input>
+
 <script>
 
 var sc =new Array();
@@ -33,5 +33,6 @@ document.getElementById('loader2').appendChild(scb[i]);
 }
 startat=startat+5;
 len =startat+5;
+setTimeout(loadme, 3000);
 }
 </script></body></html>
