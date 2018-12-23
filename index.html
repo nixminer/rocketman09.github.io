@@ -9,13 +9,13 @@ BMT chats, side by side, 25 post at a time!
 
 var sc =new Array();
 var scb =new Array();
-var startat= document.getElementById('pp').value;
-alert(startat):
- var len =startat+25;
 
  function loadme(){
+  var startat= document.getElementById('pp').value;
+ var len =startat+25;
 document.getElementById('s').style.visibility = "hidden";
- for (var i = startat; i < len; i++) {
+ 
+  for (var i = startat; i < len; i++) {
  
     sc[i] = document.createElement('script');
     sc[i].setAttribute('type', 'text/javascript');
